@@ -32,19 +32,12 @@ The Deafult dataset of cars and colleges will be used to conduct the different a
 | ------- | ---------- |
 |[Setup](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/001-Setup.md)   | download and setup required software. Download data files/other required set up files|5 min|
 |[Introduction](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/01-Intro-to-R-and-Rstudio.md)    
-| Introduction to R (What, Where amd Who)|5 min | 
-|[Variables](https://uic-library.github.io/Python_Intro/02-Variables/index.html)    | To understand variables and the rules of naming variables|6 min |
-|[Inputs and Outputs](https://uic-library.github.io/Python_Intro/03-inputs_outputs/index.html)    | To understand inputs and outputs in python|4 min |
-|[Datatypes](https://uic-library.github.io/Python_Intro/04-Datatypes/index.html)    | Learn about data types in python|15 min |
-|[Operations](https://uic-library.github.io/Python_Intro/05-Operations/index.html)    | Learn about basic operations in python|10 min | 
-|[Conditional Statements and Flow control](https://uic-library.github.io/Python_Intro/03-ConditionalStatements/index.html)    | Understand Conditional Statements and Control Flow statements|22 min | 
-|[Functions](https://uic-library.github.io/Python_Intro/07-Functions/index.html)    | To understand how to use functions in python. | 5 min |  
-|[Lists](https://uic-library.github.io/Python_Intro/08-Lists/index.html)    | To understand how to work with lists|36 min |
-|[Tuples](https://uic-library.github.io/Python_Intro/09-Tuples/index.html)    | To understand the concept of Tuples in python|9 min | 
-|[Dictionaries](https://uic-library.github.io/Python_Intro/11-Dictionaries/index.html)    | To understand the concept of dictionaries|20 min | 
-|[Sets](https://uic-library.github.io/Python_Intro/10-Sets/index.html)    | Understand how sets work in python|9 min | 
-|[String Manipulation](https://uic-library.github.io/Python_Intro/12-string_manipulation/index.html)    | To use python functions to manipulate strings|20 min |
-
+| Introduction to R (What, Where amd Who)|5 - 7 min | 
+|[Syntax Operators](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/02-syntax-operators.md)    | To understand basic R syntax and Logical operators |7 min |
+|[Variables and Datatype](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/03-Variables-and-Datatypes.md)    | To understand variables and datatypes in R |10-12 min |
+|[Introduction to Strings and DataStructures](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/04-Strings-and-DataStructures.md)    | Learn about string creation and data structures in R|15 min |
+|[DataFrames and sample dataset](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/05-Dataframe.md)    | Learn about dataframe in R|10-12 min | 
+|[Importing Data ](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/06-sample-dataset-importing-data-and-packages.md)    | Understand how to import data in R|10 min | 
 
 
 {% comment %}
