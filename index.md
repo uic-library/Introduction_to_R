@@ -30,14 +30,14 @@ The Deafult dataset of cars and colleges will be used to conduct the different a
 
 | Section    | Overview | Time Estimate |
 | ------- | ---------- |
-|[Setup](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/001-Setup.md)   | download and setup required software. Download data files/other required set up files|5 min|
-|[Introduction](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/01-Intro-to-R-and-Rstudio.md)    
-| Introduction to R (What, Where amd Who)|5 - 7 min | 
-|[Syntax Operators](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/02-syntax-operators.md)    | To understand basic R syntax and Logical operators |7 min |
-|[Variables and Datatype](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/03-Variables-and-Datatypes.md)    | To understand variables and datatypes in R |10-12 min |
-|[Introduction to Strings and DataStructures](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/04-Strings-and-DataStructures.md)    | Learn about string creation and data structures in R|15 min |
-|[DataFrames and sample dataset](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/05-Dataframe.md)    | Learn about dataframe in R|10-12 min | 
-|[Importing Data ](https://github.com/uic-library/Introduction_to_R/blob/gh-pages/_episodes/06-sample-dataset-importing-data-and-packages.md)    | Understand how to import data in R|10 min | 
+|[Setup](https://uic-library.github.io/Introduction_to_R/setup/)   | download and setup required software. Download data files/other required set up files|5 min|
+|[Introduction](https://uic-library.github.io/Introduction_to_R/01-Intro-to-R-and-Rstudio/index.html)    
+| Introduction to R (What, Where amd Who) |5 - 7 min | 
+|[Syntax Operators](https://uic-library.github.io/Introduction_to_R/02-syntax-operators/index.html)    | To understand basic R syntax and Logical operators |7 min |
+|[Variables and Datatype](https://uic-library.github.io/Introduction_to_R/03-Variables-and-Datatypes/index.html)    | To understand variables and datatypes in R |10-12 min |
+|[Introduction to Strings and DataStructures](https://uic-library.github.io/Introduction_to_R/04-Strings-and-DataStructures/index.html)    | Learn about string creation and data structures in R|15 min |
+|[DataFrames and sample dataset](https://uic-library.github.io/Introduction_to_R/05-Dataframe/index.html)    | Learn about dataframe in R|10-12 min | 
+|[Importing Data ](https://uic-library.github.io/Introduction_to_R/06-sample-dataset-importing-data-and-packages/index.html)    | Understand how to import data in R|10 min | 
 
 
 {% comment %}
