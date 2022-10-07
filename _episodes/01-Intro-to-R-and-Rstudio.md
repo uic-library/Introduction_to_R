@@ -18,7 +18,7 @@ R is a specialized language most commonly used for statistical computing, data a
 Based on the 2021 survey conducted by Kaggle, R was the third most used programming language by data professionals
 
 
-![Programming language use chart](../fig/01-use-statistics.png)
+![Programming language use chart](../fig/01_Kaggle_2020_Programming_Usage.png)
  
 Image Source: [Business Broadway, 2021](https://businessoverbroadway.com/2021/01/11/for-data-professionals-python-remains-top-programming-language-while-r-continues-to-decline/)
 
@@ -29,7 +29,7 @@ Image Source: [Business Broadway, 2021](https://businessoverbroadway.com/2021/01
 - RStudio Desktop - Regular desktop application. 
 - RStudio Server - Runs on a remote server and accessed RStudio using a web browser.
 
-![RStudio Interface](../fig/01-Rstudio-interface.PNG)
+![RStudio Interface](../fig/01-Rstudio-interface.jpg)
 
 
 **Script Area:** - Write codes (or) scripts and run them separately. Also, create a document outline (located on the top right of the script area) in this section that shows all the cod headers in one space.
