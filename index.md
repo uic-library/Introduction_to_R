@@ -2,38 +2,29 @@
 layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
-boxId: kweltidiq4bv1m9ow12prsuo9x2espsd
+boxId: bgfsp1jwffxcfca3ovps2thc26x9kjpx
 ---
 
 
 -------------------------------------------
-Add workshop description here. Make sure it is descriptive enough that people understand what they will learn in the workshop, but only one paragraph with no more than 3-5 sentences. (same as workshop description for event announcements)
+This workshop helps attendees provides an introduction to R, an overview on installing packages, information on different data types and data structure . Next it dives into a detailed description of functions performed under two main data structures. Finally, logical operators section touches base on basic statistical analysis (eg:univariate analysis). 
 
-Additionally, in a second paragraph, please mention the data set or materials that will be used in the workshop and briefly describe them. Also, briefly describe some of the things that will be done with the data/materials in the workshop, "i.e. load data into Jupyter Notebook and create basic data visualizations showing the relationship between [variable 1] and [variable 2].
+The Deafult dataset of cars and colleges will be used to conduct the different analysis. steps on how to import this data are also a part of this workshop.
 
 {% comment %} briefly list workshop goals below - should be the same as the objectives from each workshop section (also repeated in the workshop overview) {% endcomment %}
 
 ## Workshop goals
-- goal #1
-- goal #2
-- goal #3  
+- Understand the R interface
+- learn about the data types and data structures
+- learn about logical operators 
 
-<br>
+
 > ## Pre-requisites
-> __STOP:__ before starting this workshop, please attend the following Digital Scholarship Lab workshop(s) before completing this one:
-> * [Workshop Title Here](https://researchguides.uic.edu/hub/workshops)  
->   
-> __OR__ make sure you're comfortable with the following concepts (study suggestions in parentheses)  
-> 
-> * first pre-requisite ([resource 1]())
-> * second pre-requisite ([resource 2]())
-> 
+> There are no pre-requisites for this workshop, though basic understanding of working with data and statistics is recommended.
+
 {: .prereq}
 
-{% include syllabus.html %}
 
-{% comment %}
-Comment out while testing
 ## Workshop Content 
 
 | Section    | Overview | Time Estimate |
@@ -43,19 +34,24 @@ Comment out while testing
 |Section 2|* goal(s) from section #2 (objectives from section 2 page) | | 
 |Section 3| .....| | 
 
-{% endcomment %}
+
+{% comment %}
 
 ## Workshop Recording
 
 {% include box_player.html id=page.boxId %}
 
+{% endcomment %}
+
 ## Survey
 
-Thank you for attending this workshop or reading through the workshop material! If you could take 3-5 min to [respond to our anonymous survey](https://uic.ca1.qualtrics.com/jfe/form/SV_5bYL8vP2EqGbAmW), we can continue to improve this workshop. We appreciate any and all feedback!
+Thank you for attending this workshop or reading through the workshop material! If you could take 3-5 min to [respond to our survey](https://uic.ca1.qualtrics.com/jfe/form/SV_5bYL8vP2EqGbAmW), we can continue to improve this workshop. We appreciate any and all feedback!
 
 
 ## Next Up...
 Check out these workshops after you've completed this one:
-1. [Workshop Title]()
-2. [Workshop Title]()
+2. [R Tidyverse]()
+3. [R Data Pre-Processing]()
+4. [R Advanced Data Visualization]()
 
+you can click on the link [here](https://researchguides.uic.edu/hub/workshops) to attend other data science workshop hosted by the UIC library 
