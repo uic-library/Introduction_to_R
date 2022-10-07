@@ -113,7 +113,7 @@ Alternatively, you can [download and install the GitHub Desktop application](htt
 
 ---------------------------
 
-FIXME (other info that should go in the readme?)
+FIXME (other info that should go in the readme?
 
 ## Description:
 FIXME
