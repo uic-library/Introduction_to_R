@@ -29,7 +29,7 @@ Image Source: [Business Broadway, 2021](https://businessoverbroadway.com/2021/01
 - RStudio Desktop - Regular desktop application. 
 - RStudio Server - Runs on a remote server and accessed RStudio using a web browser.
 
-![RStudio Interface](../fig/01-Rstudio-interface.jpg)
+![RStudio Interface](../fig/01-Rstudio-interface.png)
 
 
 **Script Area:** - Write codes (or) scripts and run them separately. Also, create a document outline (located on the top right of the script area) in this section that shows all the cod headers in one space.
