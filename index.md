@@ -30,7 +30,7 @@ The Deafult dataset of cars and colleges will be used to conduct the different a
 | Section    | Overview | Time Estimate |
 | ------- | ---------- |
 |[Setup] (_episodes/001-Setup.md)  | download and setup required software. Download data files/other required set up files|0:20 min|
-|Section 1|* goal(s) from section #1(objectives from section 1 page)| | 
+|[Introduction] (_episodes/01-Intro-to-R-and-Rstudio.md)|* Introdcuation to R ( What, where and who)| 5-7 mins| 
 |Section 2|* goal(s) from section #2 (objectives from section 2 page) | | 
 |Section 3| .....| | 
 | Section    | Overview | Time Estimate |
