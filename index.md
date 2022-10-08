@@ -35,7 +35,7 @@ The Deafult dataset of cars and colleges will be used to conduct the different a
 |[R Syntax and Operators](https://uic-library.github.io/R-Intro/02-syntax-operators/index.html) | To understand basic R syntax and Logical operators |7 min |
 |[Variables and Datatype](https://uic-library.github.io/Introduction_to_R/03-Variables-and-Datatypes/index.html) | To understand variables and datatypes in R |10-12 min |
 |[Introduction to Strings and DataStructures](https://uic-library.github.io/Introduction_to_R/04-Strings-and-DataStructures/index.html)| Learn about string creation and data structures in R|15 min |
-|[DataFrames and Importing data](https://uic-library.github.io/Introduction_to_R/05-Dataframe-and-importing-data/index.html)| Learn about dataframe in R|10-12 min | 
+|[DataFrame and Importing data](https://uic-library.github.io/Introduction_to_R/05-Dataframe-and-importing-data/index.html)| Learn about dataframe in R|10-12 min | 
 |[Sample Dataset and Basic of data visualisation](https://uic-library.github.io/Introduction_to_R/06-sample-dataset-importing-data-and-packages/index.html)| Understand how to import data in R|10 min | 
 
 
