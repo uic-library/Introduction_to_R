@@ -70,6 +70,7 @@ For example, the command plot(c(1,2),c(3,5)) would plot the points (1,3) and (2,
 In the exercise below we will see how to create a generic plot, bar chart and a histogram in R using the Sample dataset available in the Program
 
 #### PLOT FUNCTION IN R
+
 ~~~
 LOAD DATASETS PACKAGES ###################################
 
@@ -116,7 +117,7 @@ plot(dnorm, -3, +3,
 
 #### Plotting a Bar Chart 
   
- ~~~
+~~~
  
 library(datasets)
 
