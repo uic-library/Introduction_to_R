@@ -28,12 +28,12 @@ operation directly in the console.
  ~~~
 {: .language-r}
 
-### R Console essentials 
+#### R Console essentials 
 Loading a Script in R - R provides you with variety of options to run a script. In the Script pane you can either **copy and paste** a script or **type** a new script or area select **File → Open File → load an existing R Script** from the menu. 
 Run command in R - the cursor on the line which needs to be executed and select **RUN** option or press **Ctrl + Enter**(for windows). 
 To run multiple lines of code, select all the lines first and then select **RUN** option or press **Ctrl + Enter**.
 
-![Rstudio run command](../fig/02-Rstudio-Run-command.PNG)
+![Rstudio run command](../fig/02_run_interface.png)
 
 Values can be assigned to variables in R using the “<-” symbol. The variable is written on the left 
 and is assigned the value on the right side. For example, to assign a value of 3 to x we can type the below code, 
