@@ -224,40 +224,52 @@ class(y2)
 {: .output}
 
 
-
-
-
-
 ## Data Structure
 A data structure is essentially a way to organize data in a system to facilitate effective usage of the same.Data structures are the objects that are manipulated regularly in R. They are used to store data in an organized fashion to make data manipulation and other data operations more efficient. R has many data structure which are as follows
 
 - Vectors
-
+- Matrices
+- Factors
+- Data Frames
+- Arrays
 - Lists
 
-- Matrices
-
-- Factors
-
-- Data Frames
-
-- Arrays
-
-### Vector
+#### Vector
 
 Vectors are the basic data structure of R. Vectors can hold multiple values together using the concatenate **c()** function. The type of data inside a vector can be determined by using the **type of()** function and the length (or) number of elements in a vector can be found with the **length()** function.
-
 R uses **one indexing** unlike python, hence the position of the first component in a vector can be accessed by vector name [1]
-
 A vector will always **contain** data of the **same data type**. If a vector contains multiple data types the vector will convert all its values to the same data type in the below order of precedence:
 - Character
-
 - Double (Float / Decimals)
-
 - Integers (Round whole numbers)
+- Technically, vectors can be one of two types:
+- atomic vectors
+- lists
+although the term “vector” most commonly refers to the atomic types not to lists.
+
+#### Matrices and Array
+
+Adding a dim attribute to an atomic vector allows it to behave like a multi-dimensional array. A special case of the array is the matrix, which has two dimensions. Matrices are used commonly as part of the mathematical machinery of statistics. Arrays are much rarer, but worth being aware of.
+Matrices and arrays are created with matrix() and array(), or by using the assignment form of dim()
+
+#### Data Frames
+A data frame is a very important data type in R. It’s pretty much the de facto data structure for most tabular data and what we use for statistics (explained in detail in the next section)
+**Some additional information on data frames**:
+Usually created by read.csv() and read.table(), i.e. when importing the data into R.
+Assuming all columns in a data frame are of same type, data frame can be converted to a matrix with data.matrix() (preferred) or as.matrix(). Otherwise type coercion will be enforced and the results may not always be what you expect.
+Can also create a new data frame with data.frame() function.
+Find the number of rows and columns with nrow(dat) and ncol(dat), respectively.
+Rownames are often automatically generated and look like 1, 2, …, n. Consistency in numbering of rownames may not be honored when rows are reshuffled or subset.
+
+#### Lists 
+In R lists act as containers. Unlike atomic vectors, the contents of a list are not restricted to a single mode and can encompass any mixture of data types. Lists are sometimes called generic vectors, because the elements of a list can by of any type of R object, even lists containing further list. You can create lists using list() or coerce other objects using as.list()
+
 
 ~~~
-# input code
+
+# DATA STRUCTURES ##########################################
+
+## Vector ##################################################
 
 v1 <- c(1, 2, 3, 4, 5)
 v1
@@ -267,160 +279,97 @@ v2 <- c("a", "b", "c")
 v2
 is.vector(v2)
 
-v3 <- c (TRUE, TRUE, FALSE, FALSE, TRUE)
+v3 <- c(TRUE, TRUE, FALSE, FALSE, TRUE)
 v3
 is.vector(v3)
 
-v4<- c (TRUE, TRUE, "a", 5)
-v4
-typeof(v4)
+## Matrix ##################################################
 
-v5<- c(6,7 ,8.8,23L)
-v5
-typeof(v5)
+m1 <- matrix(c(T, T, F, F, T, F), nrow = 2)
+m1
 
-~~~
-{: .language-r}
+m2 <- matrix(c("a", "b", 
+               "c", "d"), 
+               nrow = 2,
+               byrow = T)
+m2
 
-~~~
-# output
-> v1 <- c(1, 2, 3, 4, 5)
-> v1
-[1] 1 2 3 4 5
-> is.vector(v1)
-[1] TRUE
->
-> v2 <- c("a", "b", "c")
-> v2
-[1] "a" "b" "c"
-> is.vector(v2)
-[1] TRUE
->
-> v3 <- c (TRUE, TRUE, FALSE, FALSE, TRUE)
-> v3
-[1]  TRUE  TRUE FALSE FALSE  TRUE
-> is.vector(v3)
-[1] TRUE
->
-> v4<- c (TRUE, TRUE, "a", 5)
-> v4
-[1] "TRUE" "TRUE" "a"    "5"   
-> typeof(v4)
-[1] "character"
+## Array ###################################################
 
-> v5<- c(6,7 ,8.8,23L)
-> v5
-[1]  6.0  7.0  8.8 23.0
-> typeof(v5)
-[1] "double"
+# Give data, then dimemensions (rows, columns, tables)
+a1 <- array(c( 1:24), c(4, 3, 2))
+a1
 
+## Data frame ##############################################
 
-~~~
-{: .output}
+# Can combine vectors of the same length
 
+vNumeric   <- c(1, 2, 3)
+vCharacter <- c("a", "b", "c")
+vLogical   <- c(T, F, T)
 
-#### **Analyzing a Vector**
+dfa <- cbind(vNumeric, vCharacter, vLogical)
+dfa  # Matrix of one data type
 
-class(vector_name) - Type of data present inside the vector
+df <- as.data.frame(cbind(vNumeric, vCharacter, vLogical))
+df  # Makes a data frame with three different data types
 
-str(vector_name) - Structure of the vector
+## List ####################################################
 
-is.na(vector_name) - Checks if each element of vector is “NA”
+o1 <- c(1, 2, 3)
+o2 <- c("a", "b", "c", "d")
+o3 <- c(T, F, T, T, F)
 
-is.null(vector_name) - Checks if the entire vector is empty
+list1 <- list(o1, o2, o3)
+list1
 
-length(vector_name) - Number of elements present inside the vector
+list2 <- list(o1, o2, o3, list1)  # Lists within lists!
+list2
 
-~~~
-> x <- c(1,2,3,4)
-> class(x)
-[1] "numeric"
-> str(x)
- num [1:4] 1 2 3 4
-> length(x)
-[1] 4
->
-> x<- c(1,2,3,4)
-> is.na(x)
-[1] FALSE FALSE FALSE FALSE
-> is.null(x)
-[1] FALSE
->
-> x<- c(TRUE, FALSE, TRUE, TRUE)
-> class(x)
-[1] "logical"
-> str(x)
- logi [1:4] TRUE FALSE TRUE TRUE
-> length(x)
-[1] 4
->
-> x<- c(1,2,3,4,NA)
-> is.na(x)
-[1] FALSE FALSE FALSE FALSE  TRUE
-> x<- c()
-> is.null(x)
-[1] TRUE
+# COERCING TYPES ###########################################
 
-~~~
-{: .language-r}
+## Automatic coercion ######################################
 
+# Goes to "least restrictive" data type
 
+(coerce1 <- c(1, "b", TRUE))
+# coerce1  # Parenthese around command above make this moot
+typeof(coerce1)
 
-####  **Subsetting a vector**
+## Coerce numeric to integer ###############################
 
-R uses **one-indexing** mechanism where the elements in the vector start with an index number of one instead of a zero.
+(coerce2 <- 5)
+typeof(coerce2)
 
-vector_name[4] - Element at the fourth position (index) in the vector
+(coerce3 <- as.integer(5))
+typeof(coerce3)
 
-vector_name[1:4] - Elements from positions 1 to 4 in the vector
+## Coerce character to numeric #############################
 
-vector_name[c(1,4)] - Elements at positions 1 & 4 only in the vector
+(coerce4 <- c("1", "2", "3"))
+typeof(coerce4)
 
-vector_name[-c(1,4)] - All elements except those at positions 1 & 4 in the vector
+(coerce5 <- as.numeric(c("1", "2", "3")))
+typeof(coerce5)
 
-~~~
-> x <- c("A", "B", "C", "D", "E")
-> x[1]
-[1] "A"
-> x[4]
-[1]"D"
+## Coerce matrix to data frame #############################
 
-> x[1:4]
-[1] "A", "B", "C", "D"
+(coerce6 <- matrix(1:9, nrow= 3))
+is.matrix(coerce6)
 
-> x[c(1,4)]
-[1] "A" "D"
+(coerce7 <- as.data.frame(matrix(1:9, nrow= 3)))
+is.data.frame(coerce7)
 
-> x[-c(1,4)]
-[1] "B", "C", "E"
+# CLEAN UP #################################################
 
-~~~
-{: .language-r}
+# Clear environment
+rm(list = ls()) 
 
-#### **Sorting a vector**
+# Clear console
+cat("\014")  # ctrl+L
 
-Sorting of a vector can be performed using two different functions
+# Clear mind :)
 
-sort(vector) - Sorts the vector numerically or alphabetically based on vector type
-              (ascending by default)
-
-order(vector) - Returns the indices of the vector in the order they would appear when
-                the vector is sorted (ascending by default)
-
-~~~
-> x<- c("D","B","A","E","C")
-> sort(x)
-[1] "A" "B" "C" "D" "E"
-> order(x)
-[1] 3 2 5 1 4
-> x[order(x)]
-[1] "A" "B" "C" "D" "E"
-> sort (x, decreasing = TRUE)
-[1] "E" "D" "C" "B" "A"
-> order(x, decreasing = TRUE)
-[1] 4 1 5 2 3
-> x[order(x, decreasing = TRUE)]
-[1] "E" "D" "C" "B" "A"
 
 ~~~
 {: .language-r}
