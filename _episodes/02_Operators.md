@@ -9,9 +9,9 @@ objectives:
 
 
 ---
-## R syntax and Logical operators 
-Codes can be directly run in the R console. Try running the below code to perform basic 
-arithmetic operations of Addition (+), Subtraction (-), Multiplication (*), Division (/) and Modulo (%%) 
+## R syntax 
+Before learning how to code in R, it is necessary to understand the fundamentals of R. As an example, the code below performs basic arithmetic operations such as Addition (+), Subtraction (-), Multiplication (*), Division (/), and Modulo (%%), providing us with output similar to that of a basic calculator. Apart from these simple equations, R is capable of many additional functions for which the following operators are required.
+
 operation directly in the console.
  ~~~
  > 2+2
@@ -28,10 +28,9 @@ operation directly in the console.
  ~~~
 {: .language-r}
 
-Implementing the same code in the script area. If you do not see a file open in the script 
-area select **File → New File → R Script** from the menu and then type the code in the new file that appears.
-Now the code in the script area (or R File) does not execute automatically, instead place 
-the cursor on the line which needs to be executed and select **RUN** option or press **Ctrl + Enter**(for windows). 
+### R Console essentials 
+Loading a Script in R - R provides you with variety of options to run a script. In the Script pane you can either **copy and paste** a script or **type** a new script or area select **File → Open File → load an existing R Script** from the menu. 
+Run command in R - the cursor on the line which needs to be executed and select **RUN** option or press **Ctrl + Enter**(for windows). 
 To run multiple lines of code, select all the lines first and then select **RUN** option or press **Ctrl + Enter**.
 
 ![Rstudio run command](../fig/02-Rstudio-Run-command.PNG)
