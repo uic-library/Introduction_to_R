@@ -69,10 +69,8 @@ The most used plotting function in R programming is the plot() function. It is a
 For example, the command plot(c(1,2),c(3,5)) would plot the points (1,3) and (2,5)
 In the exercise below we will see how to create a generic plot, bar chart and a histogram in R using the Sample dataset available in the Program
 
+#### PLOT FUNCTION IN R
 ~~~
-
-#### Plot Function in R 
-
 LOAD DATASETS PACKAGES ###################################
 
 library(datasets)  # Load/unload base packages manually
@@ -112,10 +110,15 @@ plot(dnorm, -3, +3,
   main = "Standard Normal Distribution",
   xlab = "z-scores",
   ylab = "Density")
-  
-  library(datasets)
-  
+  ~~~
+{: .language-r}
+
+
 #### Plotting a Bar Chart 
+  
+ ~~~
+ 
+library(datasets)
 
 LOAD DATA ###############################################
 ?mtcars
@@ -146,7 +149,13 @@ dev.off()  # But only if there IS a plot
 Clear console
 cat("\014")  # ctrl+L
 
+~~~
+{: .language-r}
+
+
 #### Plotting Historgram in R 
+
+~~~
 
 LOAD PACKAGES ############################################
 
@@ -209,6 +218,8 @@ Clear mind :)
 
 ~~~
 {: .language-r}
+
+
 
 This brings us to an end of this workshop however the reference section provides links to all the materials used in this workshop and links which provide more 
 detailed understanding of Each Package in R.
