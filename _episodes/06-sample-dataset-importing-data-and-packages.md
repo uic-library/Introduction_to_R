@@ -115,7 +115,7 @@ plot(dnorm, -3, +3,
 {: .language-r}
 
 
-#### Plotting a Bar Chart 
+#### Plotting Bar Chart in R 
   
 ~~~
  
