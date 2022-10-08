@@ -69,15 +69,17 @@ The most used plotting function in R programming is the plot() function. It is a
 For example, the command plot(c(1,2),c(3,5)) would plot the points (1,3) and (2,5)
 In the exercise below we will see how to create a generic plot, bar chart and a histogram in R using the Sample dataset available in the Program
 
-# LOAD DATASETS PACKAGES ###################################
+#### Plot Function in R 
+
+LOAD DATASETS PACKAGES ###################################
 
 library(datasets)  # Load/unload base packages manually
 
-# LOAD DATA ################################################
+LOAD DATA ################################################
 
 head(iris)
 
-# PLOT DATA WITH PLOT() ####################################
+PLOT DATA WITH PLOT() ####################################
 
 ?plot  # Help for plot()
 
@@ -87,7 +89,7 @@ plot(iris$Species, iris$Petal.Width)  # Cat x quant
 plot(iris$Petal.Length, iris$Petal.Width)  # Quant pair
 plot(iris)  # Entire data frame
 
-# Plot with options
+Plot with options
 plot(iris$Petal.Length, iris$Petal.Width,
   col = "#cc0000",  # Hex code for datalab.cc red
   pch = 19,         # Use solid circles for points
@@ -95,13 +97,13 @@ plot(iris$Petal.Length, iris$Petal.Width,
   xlab = "Petal Length",
   ylab = "Petal Width")
 
-# PLOT FORMULAS WITH PLOT() ################################
+PLOT FORMULAS WITH PLOT() ################################
 
 plot(cos, 0, 2*pi)
 plot(exp, 1, 5)
 plot(dnorm, -3, +3)
 
-# Formula plot with options
+Formula plot with options
 plot(dnorm, -3, +3,
   col = "#cc0000",
   lwd = 5,
@@ -111,7 +113,7 @@ plot(dnorm, -3, +3,
   
   library(datasets)
   
- ### Plotting a Bar Chart 
+#### Plotting a Bar Chart 
 
 # LOAD DATA ###############################################
 ?mtcars
@@ -119,41 +121,41 @@ head(mtcars)
 
 sort.default(mtcars, decreasing = TRUE)
 
-# BAR CHARTS ###############################################
+BAR CHARTS ###############################################
 
 barplot(mtcars$cyl)             # Doesn't work
 
-# Need a table with frequencies for each category
+Need a table with frequencies for each category
 cylinders <- table(mtcars$cyl)  # Create table
 barplot(cylinders)              # Bar chart
 plot(cylinders)                 # Default X-Y plot (lines)
 
-# CLEAN UP #################################################
+CLEAN UP #################################################
 
-# Clear environment
+Clear environment
 rm(list = ls()) 
 
-# Clear packages
+Clear packages
 detach("package:datasets", unload = TRUE)  # For base
 
-# Clear plots
+Clear plots
 dev.off()  # But only if there IS a plot
 
-# Clear console
+Clear console
 cat("\014")  # ctrl+L
 
 #### Plotting Historgram in R 
 
- LOAD PACKAGES ############################################
+LOAD PACKAGES ############################################
 
 library(datasets)
 
-# LOAD DATA ################################################
+LOAD DATA ################################################
 
 ?iris
 head(iris)
 
-# BASIC HISTOGRAMS #########################################
+BASIC HISTOGRAMS #########################################
 
 hist(iris$Sepal.Length)
 hist(iris$Sepal.Width)
@@ -162,10 +164,10 @@ hist(iris$Petal.Width)
 
 # HISTOGRAM BY GROUP #######################################
 
-# Put graphs in 3 rows and 1 column
+Put graphs in 3 rows and 1 column
 par(mfrow = c(3, 1))
 
-# Histograms for each species using options
+Histograms for each species using options
 hist(iris$Petal.Width [iris$Species == "setosa"],
   xlim = c(0, 3),
   breaks = 9,
@@ -187,23 +189,23 @@ hist(iris$Petal.Width [iris$Species == "virginica"],
   xlab = "",
   col = "blue")
 
-# Restore graphic parameter
+Restore graphic parameter
 par(mfrow=c(1, 1))
 
-# CLEAN UP #################################################
+CLEAN UP #################################################
 
-# Clear packages
+Clear packages
 detach("package:datasets", unload = TRUE)  # For base
 
-# Clear plots
+Clear plots
 dev.off()  # But only if there IS a plot
 
-# Clear console
+Clear console
 cat("\014")  # ctrl+L
 
-# Clear mind :)
+Clear mind :)
 
-this brings us to an end of this workshop however the reference section provides links to all the materials used in this workshop and links which provide more 
+This brings us to an end of this workshop however the reference section provides links to all the materials used in this workshop and links which provide more 
 detailed understanding of Each Package in R.
 
 
