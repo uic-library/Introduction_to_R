@@ -17,9 +17,7 @@ Data frames are used for storing Data tables in R. They are two-dimensional arra
 The main features to note about a data frame are: 
 
 - Columns can be of different data types 
-
 - Each column name must be unique 
-
 - Each column should be of the same length i.e., contain the same number of elements
  
 Data frames in R can be created in two ways: 
@@ -28,14 +26,11 @@ Data frames in R can be created in two ways:
 
 ### data.frame() FUNCTION: 
 While using the command we can follow the below syntax 
-
 data. Frame (column_1, column_2, column_3, …………………….) 
-
 Make sure that the names of the columns are unique and are of the same length.
-
 ![dataframe example](../fig/05-dataframe-example.png)
 
-### Creating a data frame
+#### **Creating a data frame**
 ~~~
 # input code
 
@@ -134,257 +129,87 @@ nrow(student.data)
 [1] 5
 ~~~
 {: .output}
+### Importing data 
+There are multiple commands with various arguments to import data from different file formats into R environment. I shall show the simplest command to import a csv file as a data frame 
 
-### Accessing Dataframe
+data_frame_name <- read.csv(file. choose(), header = T)
+Here, file. choose() - Allows you to choose a .csv file stored in your local desktop
+Here, header = T - Indicates the first row in the file contains column names.
 
+![importing data](../fig/06-importing-data.PNG)
+
+Double click (or) click once and select open on your desired file to import 
+Once the data has been imported successfully the data frame would be visible with its name in the Environment pane on the top right.
+
+### Packages 
+
+-	One of the most important things in R is its collection of Packages. The package is a collection of R functions, data, and compiled code and Library is the location where the packages are stored. In order to access these packages, we can either go to **r-project. Org > CRAN> 0 Cloud> packages>CRAN task view** or use the **command library()** to load the package in the current R session.
+-	Then just call the appropriate package functions 
+
+install.packages("package_name") – Install the package from CRAN repository 
+
+install.packages( c("package_1", “"package_2", "package_3") ) -Install multiple packages
+
+library("package_name") – Load the package in current R session.
+
+#### **Importing dataset and Packages**
 ~~~
-# input code
+getwd()
+Install Package############################
+# I recommend "pacman" for managing add-on packages. It will
+# install packages, if needed, and then load the packages.
+install.packages("pacman")
 
-student.dataMaths <- data.frame(
-  std_id = c(001:005),
-  std_name = c("William", "James", "Olivia", "Steve", "David"),
-  std_marks_maths = c(56.7, 60.8, 87.1, 55, 62.7)
-)
+# Then load the package by using either of the following:
+require(pacman)  # Gives a confirmation message.
+library(pacman)  # No message.
 
-# select columns
-student.dataMaths[1]
-student.dataMaths[-2]
+# Or, by using "pacman::p_load" you can use the p_load
+# function from pacman without actually loading pacman.
+# These are packages I load every time.
+pacman::p_load(pacman, dplyr, GGally, ggplot2, ggthemes, 
+  ggvis, httr, lubridate, plotly, rio, rmarkdown, shiny, 
+  stringr, tidyr) 
 
-#selecting columns ONLY data frames
-# give the values as vector
-student.dataMaths$std_marks_maths
+library(datasets)  # Load/unload base packages manually
 
-#dataframe[Rows, Cols]
+# CLEAN UP #################################################
 
-student.dataMaths[2]
-student.dataMaths[2,]
+# Clear packages
+p_unload(dplyr, tidyr, stringr) # Clear specific packages
+p_unload(all)  # Easier: clears all add-ons
+detach("package:datasets", unload = TRUE)  # For base
 
-student.dataMaths[c(1:3),]
+# Clear console
+cat("\014")  # ctrl+L
 
-~~~
-{: .language-r}
+Using Tidyverse#############################################
+install.packages("tidyverse")
+library (tidyverse)
+Importing Data #############################################
+df <- read.csv("StateData.csv")
+df
+head(df)
+str(df) 
+summary (df)
 
-~~~
-# output
-> student.dataMaths <- data.frame(
-+    std_id = c(001:005),
-+    std_name = c("William", "James", "Olivia", "Steve", "David"),
-+    std_marks_maths = c(56.7, 60.8, 87.1, 55, 62.7)
-+ )
-> 
-> # select columns
-> student.dataMaths[1]
-  std_id
-1      1
-2      2
-3      3
-4      4
-5      5
-> student.dataMaths[-2]
-  std_id std_marks_maths
-1      1            56.7
-2      2            60.8
-3      3            87.1
-4      4            55.0
-5      5            62.7
-> 
-> #selecting columns ONLY data frames
-> # give the values as vector
-> student.dataMaths$std_marks_maths
-[1] 56.7 60.8 87.1 55.0 62.7
-> 
-> #dataframe[Rows, Cols]
-> 
-> student.dataMaths[2]
-  std_name
-1  William
-2    James
-3   Olivia
-4    Steve
-5    David
-> student.dataMaths[2,]
-  std_id std_name std_marks_maths
-2      2    James            60.8
-> 
-> student.dataMaths[c(1:3),]
-  std_id std_name std_marks_maths
-1      1  William            56.7
-2      2    James            60.8
-3      3   Olivia            87.1
 
-~~~
-{: .output}
+df[c("State", "governor")]
+head(df[c("State", "governor")])
+summary(df[c("State", "governor")]) 
+sum (df[c("State", "governor")]))
+df = df.sum(axis=1)
+df1 <- c(sum(df$instagram), sum(df$facebook))
+df1
+c (sum(df$instagram), sum(df$retweet))
+sum(df$State) # character datatype
+mean(df$instagram)
+df2<- (c(sd(df$instagram), sd(df$facebook)
+df<-2
 
-### Data Transformation 
-
-~~~
-#Input code 
-student.dataEnglish <- data.frame(
-   std_id = c(001:005),
-   std_name = c("William", "James", "Olivia", "Steve", "David"),
-   std_marks_eng = c(84.8, 98.4, 74.6, 80, 95)
-)
-
-student.marks <- data.frame(
-   student.dataEnglish, 
-   student.dataMaths[3])
-
-student.marks
-
-stud_6 <- data.frame(std_id = c(1:6))
-stud_6
-
-stud6_marks <- data.frame(
-   student.dataEnglish, 
-   stud_6)
-
-student.dataEnglish
-
-new_stdData <- data.frame(
-   std_id = 006,
-   std_name = "George",
-   std_marks_eng = 75.6)
-
-new_stdData
-
-update.stdDataEng <- rbind(student.dataEnglish, new_stdData)
-
-update.stdDataEng
-
+"1" %in% df$instagram
 ~~~
 {: .language-r}
-
-~~~
-# output
-> student.dataEnglish <- data.frame(
-+    std_id = c(001:005),
-+    std_name = c("William", "James", "Olivia", "Steve", "David"),
-+    std_marks_eng = c(84.8, 98.4, 74.6, 80, 95)
-+ )
-> 
-> student.marks <- data.frame(
-+    student.dataEnglish, 
-+    student.dataMaths[3])
-> 
-> student.marks
-  std_id std_name std_marks_eng std_marks_maths
-1      1  William          84.8            56.7
-2      2    James          98.4            60.8
-3      3   Olivia          74.6            87.1
-4      4    Steve          80.0            55.0
-5      5    David          95.0            62.7
-> 
-> stud_6 <- data.frame(std_id = c(1:6))
-> stud_6
-  std_id
-1      1
-2      2
-3      3
-4      4
-5      5
-6      6
-> 
-> stud6_marks <- data.frame(
-+    student.dataEnglish, 
-+    stud_6)
-Error in data.frame(student.dataEnglish, stud_6) : 
-  arguments imply differing number of rows: 5, 6
-> 
-> student.dataEnglish
-  std_id std_name std_marks_eng
-1      1  William          84.8
-2      2    James          98.4
-3      3   Olivia          74.6
-4      4    Steve          80.0
-5      5    David          95.0
-> 
-> new_stdData <- data.frame(
-+    std_id = 006,
-+    std_name = "George",
-+    std_marks_eng = 75.6)
-> 
-> new_stdData
-  std_id std_name std_marks_eng
-1      6   George          75.6
-> 
-> update.stdDataEng <- rbind(student.dataEnglish, new_stdData)
-> 
-> update.stdDataEng
-  std_id std_name std_marks_eng
-1      1  William          84.8
-2      2    James          98.4
-3      3   Olivia          74.6
-4      4    Steve          80.0
-5      5    David          95.0
-6      6   George          75.6
-
-~~~
-{: .output}
-
-### Data Operations
-
-~~~
-# input code
-# Create a dataframe for user data containing their
-# IDs, Names, Age and heights in cm.
-user.data <- data.frame(
-   user.sn = c(1:5),
-   user.name = c("Mr. A", "Mrs B", "Mrs. C", "Mr. D", "Mr. D"),
-   user.age = c(25, 50, 41, 29, 58),
-   user.height = c(181, 165, 155, 162, 142)
-)
-user.data
-# Calculating sum of ages 
-sum(user.data$user.age)
-
-# Calculating the mean of user ages
-mean(user.data[[3]])
-
-# Calculating standard deviation of user ages
-sd(user.data$user.age)
-
-# Searching for 180 in user.data dataframe
-"180" %in% user.data$user.height
-
-"165" %in% user.data$user.height
-
-~~~
-{: .language-r}
-
-~~~
-# output
-> # IDs, Names, Age and heights in cm.
-> user.data <- data.frame(
-+    user.sn = c(1:5),
-+    user.name = c("Mr. A", "Mrs B", "Mrs. C", "Mr. D", "Mr. D"),
-+    user.age = c(25, 50, 41, 29, 58),
-+    user.height = c(181, 165, 155, 162, 142)
-+ )
-> user.data
-  user.sn user.name user.age user.height
-1       1     Mr. A       25         181
-2       2     Mrs B       50         165
-3       3    Mrs. C       41         155
-4       4     Mr. D       29         162
-5       5     Mr. D       58         142
-> # Calculating sum of ages 
-> sum(user.data$user.age)
-[1] 203
-> # Calculating the mean of user ages
-> mean(user.data[[3]])
-[1] 40.6
-> # Calculating standard deviation of user ages
-> sd(user.data$user.age)
-[1] 13.86723
-> 
-> # Searching for 180 in user.data dataframe
-> "180" %in% user.data$user.height
-[1] FALSE
-> 
-> "165" %in% user.data$user.height
-[1] TRUE
-~~~
-{: .output}
 
 
 
