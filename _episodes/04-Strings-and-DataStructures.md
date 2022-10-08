@@ -242,6 +242,7 @@ A vector will always **contain** data of the **same data type**. If a vector con
 - Character
 - Double (Float / Decimals)
 - Integers (Round whole numbers)
+
 Technically, vectors can be one of two types:
 - atomic vectors
 - lists
