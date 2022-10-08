@@ -9,9 +9,9 @@ keypoints:
 - "importance of using packages in R studio for efficient data analysis"
 ---
 
-## Variables
+## **Variables**
 
--It’s a memory location where you store some type of value and where that value can be altered based on your need.
+-Variable are basically a **storage location** where you store some type of value and where that value can be altered based on your need.
 Variable is also known as **Identifier** because the variable name identifies the value that is stored in the memory (RAM). 
 As we Know R is a case-sensitive language hence a variable ABC = 15 and Abc= 32 can have different values.
 
@@ -44,14 +44,10 @@ Data type in R specifies the size and type of information the variable will stor
 
 #### Checking data type in R 
 
-There are several functions that can show you the data type of an R object, such as **typeof**, **mode**, **storage.mode, class** and **str**.the main use of some of them is not to just check the data type of an R object. For instance, the class of an R object can be different from the data type (which is very useful when creating S3 classes) and the str function is designed to show the full structure of an object. If you want to print the R data type, we recommend using the typeof function.
-To summarize, the following imagwe shows the differences of the possible outputs when applying **typeof, storage.mode** and **mode** functions.
-
-![ datatype table](../fig/03-data-type-table.PNG)
-
+There are several functions that can show you the data type of an R object, such as **typeof**, **mode**, **storage.mode, class** and **str**.the main use of some of them is not to just check the data type of an R object. For instance, the class of an R object can be different from the data type and the str function is designed to show the full structure of an object. If you want to print the R data type, we recommend using the typeof functio
 There are other functions that allow you to check if some object belongs to some data type, returning **TRUE or FALSE**. As a rule, these functions start with **is.** followed by the data type.
 
-Example- is.numeric(4) #true
+**Example- is.numeric(4) #true**
 
 #### Data type coercion 
 
@@ -71,9 +67,7 @@ as.raw ==	 Raw
 ### Character data type 
 
 Character data type stores value or strings and contains alphabets, numbers, and symbols
-
 Character data type value is written withing single (‘ ‘)or double inverted quotes (“ “) 
-
 Example- “A”, “2.21”, “skill@”.
 
 ~~~
@@ -82,11 +76,6 @@ Example- “A”, “2.21”, “skill@”.
 charac <- "Abcd"
 charac
 class(charac)
-
-# Declaring character value with single quotes ''
-charac_1 <- 'b'
-charac_1
-class(charac_1)
 
 #Convert values to character data type.
 pi_value <- 3.14
@@ -112,13 +101,6 @@ full_name
 > charac
 [1] "Abcd"
 > class(charac)
-[1] "character"
-
- # Declaring character value with single quotes ''
-> charac_1 <- 'b'
-> charac_1
-[1] "b"
-> class(charac_1)
 [1] "character"
 
 > #Convert values to character data type.
@@ -162,17 +144,6 @@ class(z)
 as.complex(5)
 as.complex(7i)
 
-# Square root function on complex numbers
-#Find the square root of -3+0i
-sqrt (-3) 
-
-#Typing in the complete value
-sqrt(-1+0i) 
-
-#Coerce to complex value
-sqrt (as.complex (-1))
-
-
 #Performing Addition on Complex Numbers
 y1 <- 7+3i
 y2 <- 8+9i
@@ -202,23 +173,7 @@ class(sum_y)
 [1] 5+0i
 > as.complex(7i)
 [1] 0+7i
-> 
-> # Square root function on complex numbers
-> #Find the square root of -3+0i
-> sqrt (-3) 
-[1] NaN
-Warning message:
-In sqrt(-3) : NaNs produced
-> 
-> #Typing in the complete value
-> sqrt(-1+0i) 
-[1] 0+1i
-> 
-> #Coerce to complex value
-> sqrt (as.complex (-1))
-[1] 0+1i
-> 
-> 
+
 > #Performing Addition on Complex Numbers
 > y1 <- 7+3i
 > y2 <- 8+9i
@@ -228,16 +183,12 @@ In sqrt(-3) : NaNs produced
 > class(sum_y)
 [1] "complex"
 > 
-
 ~~~
 {: .output}
 
 ### Numeric Data Type 
 
--	This data type is for numeric values which contain numbers with or without a decimal point,
-
--	This is the default number data type in R 
-	
+-	This data type represents all real numbers with or without decimal values, and is most commonly used data type.
  Example: - 1, 20.5, -97.05, -65 
 
 ~~~
@@ -305,10 +256,7 @@ typeof(x3)
 
 ### Integer Data Type 
 
--	Integer data type stores non-decimal values.
-
--	The as. integer () function can be used to convert a number into integer type data in R.
-
+-	Integer data type stores non-decimal values and is denoted with by adding Capital **L** afer a value.The as. integer () function can be used to convert a number into integer type data in R.
 Example – 5, 102, 600, 1003.
 
 ~~~
@@ -318,15 +266,12 @@ x <-  18L # putting capital 'L' after a value forces it to be
 # stored as Integer.
 class(x)
 
-
 y <-  9
 class(y)
-
 
 x1 <-  23.0L
 x1 <-  23L
 class(x1)
-
 
 # Using integer function to declare an Integer type value 
 y1 <-  as.integer(44)
@@ -336,22 +281,16 @@ class(y1)
 y2 <-  as.integer(45.2)
 y2
 
-#Parse a string (coerce a decimal string)
-y3 <- as.integer("8.65")
-class(y3)
 
 #Convert Logical States to Integer
 Logic_True <- as.integer(TRUE)
 Logic_True
 
-Logic_False <- as.integer(FALSE)
-Logic_False
 
 # To check if the value is integer type:
 is.integer(x)
 is.integer(y)
 is.integer(y1)
-
 
 #Creating integer vector from 1 to 5
 m = 1:5
@@ -392,21 +331,12 @@ integer literal 23.0L contains unnecessary decimal point
 > y2 <-  as.integer(45.2)
 > y2
 [1] 45
-> 
-> #Parse a string (coerce a decimal string)
-> y3 <- as.integer("8.65")
-> class(y3)
-[1] "integer"
-> 
+
 > #Convert Logical States to Integer
 > Logic_True <- as.integer(TRUE)
 > Logic_True
 [1] 1
-> 
-> Logic_False <- as.integer(FALSE)
-> Logic_False
-[1] 0
-> 
+ 
 > # To check if the value is integer type:
 > is.integer(x)
 [1] TRUE
@@ -440,8 +370,7 @@ integer literal 23.0L contains unnecessary decimal point
 
 ### Logical Data Type 
 -	This data type stores logical or Boolean values which are often generated as a result of logical operations.
--	
-Example – True, False
+Example – TRUE, FALSE
 
 ~~~
 # input code
@@ -461,14 +390,8 @@ mode(x1)
 # Less Than and Greater Than Comparison
 32 < 98  # TRUE Statement
 37 > 52  # FALSE Statement
-87 <= 92 # TRUE Statement
-1 >= 9   # FALSE Statement
-
-# Equal TO Comparison
 57 == 34  # FALSE Statement
 80 == 80  # TRUE Statement
-"hi" == "hi" # TRUE Statement
-
 ~~~
 {: .language-r}
 
@@ -491,37 +414,13 @@ mode(x1)
 [1] TRUE
 > 37 > 52  # FALSE Statement
 [1] FALSE
-> 87 <= 92 # TRUE Statement
-[1] TRUE
-> 1 >= 9   # FALSE Statement
-[1] FALSE
-> 
 > # Equal TO Comparison
 > 57 == 34  # FALSE Statement
 [1] FALSE
 > 80 == 80  # TRUE Statement
 [1] TRUE
-> "hi" == "hi" # TRUE Statement
-[1] TRUE
-
 ~~~
 {: .output}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
