@@ -54,7 +54,14 @@ Once a variable is created it will be visible under the environment section
  ~~~
 {: .language-r}
 
-**Commenting in R ** - 
+**Commenting in R** - 
+Comments are a way to improve your code’s readability and are only meant for the user so the interpreter ignores it. Comments starts with a **#** When executing the R-code, **R will ignore anything that starts with #**. Only single-line comments are available in R but we can also use multiline comments by putting then in **'** or **"** quotes.
+Example:- **# This is a comment**
+"Hello World!"
+
+**Function in R**
+A key feature of R is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe etc.), process it, and return a result.
+The general usage for a function is the name of the function followed by parentheses:**function_name(input)**
 
 One thing to be aware of is that R is **case-sensitive**. Hence variable “a” is different from “A”
 
@@ -80,14 +87,4 @@ Provides a list of Boolean results based on operation performed
 
 Please note that in R the Boolean values “TRUE” & “FALSE” can also be written as “T” &” F”.
 
-#### Function in R
-A key feature of R is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe etc.), process it, and return a result.
-The general usage for a function is the name of the function followed by parentheses:**function_name(input)**
-
-#### Comments in R 
-Comments can be used to explain R code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
-Comments starts with a **#** When executing the R-code, **R will ignore anything that starts with #**.
-
-Example:- **# This is a comment**
-"Hello World!"
 
