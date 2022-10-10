@@ -30,7 +30,8 @@ operation directly in the console.
 
 #### R Console essentials 
 **Loading a Script in R** - R provides you with variety of options to run a script. In the Script pane you can either **copy and paste** a script or **type** a new script or area select **File → Open File → load an existing R Script** from the menu. 
-**Run and options command in R** - The script's execution provides us with a code shown in the console pane, which is accessed by clicking the **RUN** button on the script pane or by pressing the **ctrl + Enter** keys.On the other hand we can access the options menu by going to **Menu bar>>tools>>options** which will provide you with a menue to change the apperance, accessibility and other settings of the R studio.
+
+**Run and option command in R** - The script's execution provides us with a code shown in the console pane, which is accessed by clicking the **RUN** button on the script pane or by pressing the **ctrl + Enter** keys.On the other hand we can access the options menu by going to **Menu bar>>tools>>options** which will provide you with a menu to change the apperance, accessibility and other settings of the R studio.
 
 
 ![Rstudio run command](../fig/02_run_interface.png)
