@@ -8,7 +8,7 @@ objectives:
 ---
 
 ## R
-R is a specialized language most commonly used for statistical computing, data analysis, and implementing graphics. It is open-source and free program. R Language is widely used by worldwide by statisticians and data miners . It helps to perform more efficient and precise data wrangling, analyzing, and visualizing functions for a larger dataset compared to a spreedsheet
+R is a specialized language most commonly used for statistical computing, data analysis, and implementing graphics. It is open-source and free program. R Language is  used worldwide by statisticians and data miners . It helps to perform more efficient and precise data wrangling, analyzing, and visualizing functions for a larger dataset compared to a spreedsheet
 
 ### Why use R 
 - R is a very easy and powerful tool for any statistical operations which can also easily be learned by any person even from a non-technical background.
