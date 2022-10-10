@@ -38,7 +38,7 @@ operation directly in the console.
 
 **Assigning values in R**- Values can be assigned to variables in R using the “<-” symbol. The variable is written on the left 
 and is assigned the value on the right side. 
-For example, to assign a value of 3 to x we can type the below code, **<- 3**
+For example, to assign a value of 3 to x we can type the code, **x <- 3**
 Assigning values to variables are quite useful especially if these values would be used again. 
 Similar to the previous examples, operations can be performed on the variables to get output 
 directly (or) the output can be stored in a different variable. 
