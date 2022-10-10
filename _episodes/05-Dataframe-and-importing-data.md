@@ -173,16 +173,6 @@ pacman::p_load(pacman, dplyr, GGally, ggplot2, ggthemes,
 
 library(datasets)  # Load/unload base packages manually
 
-# CLEAN UP #################################################
-
-# Clear packages
-p_unload(dplyr, tidyr, stringr) # Clear specific packages
-p_unload(all)  # Easier: clears all add-ons
-detach("package:datasets", unload = TRUE)  # For base
-
-# Clear console
-cat("\014")  # ctrl+L
-
 Using Tidyverse#############################################
 install.packages("tidyverse")
 library (tidyverse)
