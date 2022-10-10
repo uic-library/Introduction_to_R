@@ -20,8 +20,6 @@ keypoints:
 -	String starts and ends with a single quote. Double quotes (“ “), and through the escape sequence (‘/’), single quote can become a part of the string.
 Example- ‘buses’, ‘merry”s’, ‘ merry\’s’
 
--	String start and end with a double quote. Single quote (‘ ‘), and through the escape sequence (‘\’), double quote can become a part of the string
-Example : “buses”, “merry’s”, “ merry\”s”
 
 ~~~
 # input code string concatenation
