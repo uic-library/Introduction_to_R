@@ -256,7 +256,8 @@ A data frame is a very important data type in R. It’s pretty much the de facto
 **Some additional information on data frames**:
 Usually created by read.csv() and read.table(), i.e. when importing the data into R.
 Assuming all columns in a data frame are of same type, data frame can be converted to a matrix with data.matrix() (preferred) or as.matrix(). Otherwise type coercion will be enforced and the results may not always be what you expect.
-Can also create a new data frame with data.frame() function.
+
+You can also create a new data frame with data.frame() function.
 Find the number of rows and columns with nrow(dat) and ncol(dat), respectively.
 Rownames are often automatically generated and look like 1, 2, …, n. Consistency in numbering of rownames may not be honored when rows are reshuffled or subset.
 
