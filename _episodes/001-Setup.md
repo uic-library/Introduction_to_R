@@ -17,9 +17,7 @@ folder \_includes/install_instructions by using code seen below. Add or remove i
 
 ## Setup files:
 
-Please download the following files to particpate in the workshop:
-
-[R Project zip files](files/R-repro-pub-main.zip)
+Please download the files emailed to particpate in the workshop:
 
 
 ## About the Data Used in this Workshop:
