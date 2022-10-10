@@ -205,21 +205,9 @@ df1
 c (sum(df$instagram), sum(df$retweet))
 sum(df$State) # character datatype
 mean(df$instagram)
-df2<- (c(sd(df$instagram), sd(df$facebook)
-df<-2
-
 "1" %in% df$instagram
 ~~~
 {: .language-r}
-
-
-
-
-
-
-
-
-
 
 
 {% include links.md %}
